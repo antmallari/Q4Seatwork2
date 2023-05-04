@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Seatwork 2</title>
+</head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #FFFFFF;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D9C3EF;
+}
+</style>
+</head>
+<h1>Convertion Table</h1>
+<body>
+<p id="today"></p>
+
+<h2>Temperature Converter</h2>
+<script>
+	const date = new Date();
+	document.getElementById("today").innerHTML = date;
+</script>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+
+<body bgcolor="#D9BBEF">
+
+<table>
+  <tr>
+    <th>Fahrenheit</th>
+    <th>Celsius</th>
+    <th>Desccription</th>
+  </tr>
+  <tr>
+    <td>-459.67°F</td>
+    <td>-273.15°C</td>
+    <td>Absolute Zero</td>
+  </tr>
+  <tr>
+    <td>-40°F</td>
+    <td>-40°C</td>
+    <td>Parity</td>
+  </tr>
+  <tr>
+    <td>0°F</td>
+    <td>-17.78°C</td>
+    <td>Zero</td>
+  </tr>
+  <tr>
+    <td>32°F</td>
+    <td>0°C</td>
+    <td>Freezing point</td>
+  </tr>
+  <tr>
+    <td>98.6°F</td>
+    <td>37°C</td>
+    <td>Body Temperature</td>
+  </tr>
+  <tr>
+    <td>212°F</td>
+    <td>100°C</td>
+    <td>Boiling point</td>
+  </tr>
+</table>
+</body>
+</html>
